@@ -144,8 +144,10 @@ class Juguete {
 nombre = "Victor" + 0
 ```
 
+![Fin de cadena de texto](img/Diagrama%20sin%20t%C3%ADtulo.drawio.svg "explicacion")
+
 #### Las cadenas de texto son un `Array` de caracteres
 
 ```
-arrayCaracteres = ['V', 'i', 'c', 't', 'o', 'r']
+arrayCaracteres = ['V', 'i', 'c', 't', 'o', 'r', 0]
 ```
