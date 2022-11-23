@@ -2,27 +2,28 @@ public class ejercicio2 {
 
     public static void main(String[] args) throws Exception {
 
-        int numeroif = -12;
+        int numeroIf = -12;
         int numWhil = -2;
         int numDoWhil = -1;
         var estacion = "verano";
 
         // Uso if
-        if (numeroif > 0) {
-            System.out.println("es positivo");
-        } else if (numeroif == 0) {
-            System.out.println("es CERO");
+        if (numeroIf > 0) {
+            System.out.println("La variable numeroIf " + numeroIf + " es positivo");
+        } else if (numeroIf == 0) {
+            System.out.println("La variable numeroIf es 0");
         } else {
-            System.out.println("es negativo");
+            System.out.println("La variable numeroIf " + numeroIf + " es negativo");
         }
 
         // Uso While
         while (numWhil < 3) {
             numWhil++;
-            System.out.println(numWhil);
+            System.out.println("La variable numeroWhile es: \n" + numWhil);
         }
 
         // Uso Do While
+        // Al no cumplirse la condición, solo entra en el bucle una vez
         do {
             numDoWhil++;
             System.out.println(numDoWhil);
@@ -30,7 +31,7 @@ public class ejercicio2 {
 
         // Uso For
         for (int numFor = 0; numFor <= 3; numFor++) {
-            System.out.println(numFor);
+            System.out.println("La variable numeroFor es: " + numFor);
         }
 
         // Uso Switch
