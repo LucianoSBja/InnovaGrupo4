@@ -1,5 +1,5 @@
 public class countDoWhile {
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
         int contador = 3;
 
         do {

@@ -1,6 +1,8 @@
+package ejercicios;
+
 public class ejercicio2 {
 
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
 
         int numeroIf = -12;
         int numWhil = -2;

@@ -1,7 +1,9 @@
+package ejercicios;
+
 public class coche {
     int numeroP = 0;
 
-    public void agregarP(){
+    public void agregarP() {
         numeroP++;
     }
 

@@ -1,6 +1,6 @@
 public class countWhile {
 
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
         int contador = 10;
 
         while (contador > 0) {

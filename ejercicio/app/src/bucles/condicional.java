@@ -1,5 +1,5 @@
 public class condicional {
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
         String estacion = "invierno";
 
         if (estacion == "primavera") {
@@ -13,4 +13,3 @@ public class condicional {
     }
 
 }
-
