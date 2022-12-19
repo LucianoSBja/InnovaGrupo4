@@ -8,15 +8,19 @@ public class ejercicio_tema_9 {
         cliente.setNombre("luciano");
         cliente.setEdad(27);
         cliente.setTelefono(12345);
-        cliente.setCredito(25);
+        cliente.setCredito(125.5);
 
-        System.out.println("Nombre: " + cliente.getNombre());
-        System.out.println("Edad: " + cliente.getEdad());
-        System.out.println("Telefono: " + cliente.getTelefono());
-        System.out.println("Credito: " + cliente.getCredito());
+        System.out.println("Soy " + cliente.getNombre() + ", tengo " + cliente.getEdad() + " años y mi telefono es "
+                + cliente.getTelefono() + " y mi credito disponible es " + cliente.getCredito() + "$ARG");
 
+        trabajador.setNombre("Ezequiel");
+        trabajador.setEdad(29);
+        trabajador.setTelefono(54321);
         trabajador.setSalario(30.000);
-        System.out.println("Salario: " + trabajador.getSalario());
+
+        System.out
+                .println("Soy " + trabajador.getNombre() + ", tengo " + trabajador.getEdad() + " años y mi telefono es "
+                        + trabajador.getTelefono() + " y mi salario disponible es " + trabajador.getSalario() + "$ARG");
 
     }
 }
@@ -52,13 +56,13 @@ class Persona {
 }
 
 class Cliente extends Persona {
-    int credito;
+    double credito;
 
-    public void setCredito(int credito) {
+    public void setCredito(double credito) {
         this.credito = credito;
     }
 
-    public int getCredito() {
+    public double getCredito() {
         return this.credito;
     }
 }
