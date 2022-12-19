@@ -15,7 +15,7 @@ public class ejercicio_tema_9 {
         System.out.println("Telefono: " + cliente.getTelefono());
         System.out.println("Credito: " + cliente.getCredito());
 
-        trabajador.setSalario(30000);
+        trabajador.setSalario(30.000);
         System.out.println("Salario: " + trabajador.getSalario());
 
     }
@@ -64,13 +64,13 @@ class Cliente extends Persona {
 }
 
 class Trabajador extends Persona {
-    int salario;
+    double salario;
 
-    public void setSalario(int salario) {
+    public void setSalario(double salario) {
         this.salario = salario;
     }
 
-    public int getSalario() {
+    public double getSalario() {
         return this.salario;
     }
 }
