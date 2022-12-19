@@ -576,4 +576,181 @@ CLASE MICLASE
         DEVUELVE ESTA_CLASE.sonido
 ```
 
-<p>las funciones abstractas son prototipos.</p>
+<p>Las funciones abstractas son prototipos.</p>
+<p>No tiene cuerpo de funcion y cuando lo herede, cada clase tiene que implementar esa funcion para su funcionalidad.</p>
+
+- _Ejemplo en [codigo](./ejercicio/app/src/clases/abstracta.java)_
+
+<br>
+
+# Herencia, Polimorfismo e Interfaces
+
+<br>
+
+## **HERENCIA**
+
+<p>Consiste en que una clase hereda metodos y propiedades de otro metodo de otra clase, a la clase que hereda se lo llamamos <strong>class HIJA</strong> y a la clase que sede sus funciones <strong>class PADRE</strong></p>
+
+### <strong>`Pseudocodigo`</strong>
+
+```
+CLASE VEHICULO
+    PRIVADA VELOCIDADMAXIMA;
+    PRIVADA TIPOGASOLINA;
+
+    FUNCTION diHola()
+        IMPRIME "Hola"
+
+CLASE COCHE HEREDA DE VEHICULO;
+  (heredada) VELOCIDADMAXIMA
+  (heredada) TIPOGASOLINA
+  NUMERO_DE_PUERTAS;
+
+  (heredada) FUNCION diHOLA()
+  IMPRIME "Hola"
+
+  FUNCTION SETTERNUMERODEPUERTAS(INTERGER puertas)
+    ESTA_CLASE.NUMERO_DE_PUERTA = puertas
+
+  FUNCTION GETTERNUMERODEPUERTAS() INTEGER
+    DEVUELVE ESTA_CLASE.NUMERO_DE_PUERTAS
+
+
+```
+
+<p>Podemos crear otra clase como <strong>COUPE</strong> para que herede de la clase <strong>COCHE</strong> y asi sucesivamente. A esto se lo llama <strong>HERENCIA MULTIPLE</strong></p>
+
+```
+CLASE COUPE HEREDA DE COCHE;
+  (heredada) VELOCIDADMAXIMA
+  (heredada) TIPOGASOLINA
+  NUMERO_DE_PUERTAS;
+
+  (heredada) FUNCION diHOLA()
+  IMPRIME "Hola"
+
+  (heredada) FUNCTION SETTERNUMERODEPUERTAS(INTERGER puertas)
+    ESTA_CLASE.NUMERO_DE_PUERTA = puertas
+
+  (heredada) FUNCTION GETTERNUMERODEPUERTAS() INTEGER
+    DEVUELVE ESTA_CLASE.NUMERO_DE_PUERTAS
+```
+
+<p>Cuando no queremos que se herede tenemos que agregar adelante de la class  <strong>"final"</strong></p>
+<img src="./img/class_final.png" width="50%" height="50%">
+
+<br>
+
+### **Cunado utilizo una clase `PADRE` y una `HIJA`?**
+
+<p>Utilizo una clase <strong>PADRE</strong> cuando tengo la certeza y absoluta seguridad que no voy a necesitar ningun metodo adicional que ya este en esta clase.
+</p>
+
+<br>
+
+### **HERENCIA MULTIPLE**
+
+<p>Conciste en que <strong>hereda</strong> de dos o mas <strong>CLASES PADRE</strong></p>
+
+### <strong>`Pseudocodigo`</strong>
+
+```
+LASE VEHICULO
+    PRIVADA VELOCIDADMAXIMA;
+    PRIVADA TIPOGASOLINA;
+
+    FUNCTION diHola()
+        IMPRIME "Hola"
+
+CLASE COCHE HEREDA DE VEHICULO Y DE MOTOR
+  (heredada) VELOCIDADMAXIMA;
+  (heredada) TIPOMOTOR;
+
+```
+
+<br>
+
+### **HERENCIA JERARQUICA**
+
+<p>Conciste en que de una clase base deriban otras clases y se produce una <strong>jerarquia</strong> y es parecido como un <strong>arbol familiar</strong>. </p>
+
+### <strong>`Pseudocodigo`</strong>
+
+```
+CLASE A
+  CLASE B HEREDA DE A
+    CLASE UNO HEREDA DE B
+    CLASE DOS HEREDA DE B
+
+CLASE C
+  CLASE C HEREDA DE A
+    CLASE UNO HEREDA DE C
+    CLASE DOS HEREDA DE C
+
+CLASE D
+  CLASE D HEREDA DE A
+    CLASE UNO HEREDA DE D
+    CLASE DOS HEREDA DE BD
+```
+
+<br>
+
+### **HERENCIA HIBRIDA**
+
+<p>Conciste en combinar modelos de herencias.</p>
+
+### <strong>`Pseudocodigo`</strong>
+
+```
+CLASE A
+  CLASE B HEREDA DE A
+  CLASE C HEREDA DE A
+
+  CLASE D HEREDA DE A Y HEREDA DE C
+```
+
+<p>Si lo imaginamos y lo dibujamos parece un rombo.</p>
+
+<br>
+
+## **POLIMORFISMO**
+
+<p>Conciste en que las clases hijas implementan la misma funcion pero hacen distinta cosa.</p>
+
+### <strong>`Pseudocodigo`</strong>
+
+```
+CLASE VEHICULO
+    PRIVADA VELOCIDADMAXIMA;
+
+ FUNCTION diHola()
+        IMPRIME "Hola"
+
+CLASE COCHE HEREDA DE VEHICULO
+  (heredada) VELOCIDADMAXIMA;
+
+  (heredada PERO LA SOBREESCRIBO) FUNCTION diHola()
+        IMPRIME "Soy un robot y se contar del 1 al 10"
+```
+
+- _Ejemplo en [`codigo`](./ejercicio/app/src/polimorfismo/polimorfismo.java)_
+
+  <br>
+
+## **INTERFACES**
+
+<p>Son parecidas a las clases abstracta pero a diferencias de ellas no implementan ninguna funcion,si no, que nos dice lo que nosotros tenemos que implementar. </p>
+
+### <strong>`Pseudocodigo`</strong>
+
+```
+INTERFACE COCHE
+  FUNCION ACELERAR(NUMERO CUANTAVELOCIDAD)
+  FUNCION FRENAR(NUMERO CUANTAVELOCIDAD)
+```
+
+<p>Las <strong>INTERFACE</strong> las utilizamos cuando creamos clases y esas tiene ya funciones previamente definidas</p>
+
+- _Ejemplo en [`codigo`](./ejercicio/app/src/_interface/interfaces.java)_
+
+<br>
