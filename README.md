@@ -754,3 +754,194 @@ INTERFACE COCHE
 - _Ejemplo en [`codigo`](./ejercicio/app/src/_interface/interfaces.java)_
 
 <br>
+
+---
+
+# Metodos de clase
+
+<br>
+
+<p>Un metodo de clase es, ni mas ni menos, que una <strong>FUNCION</strong>.</p>
+
+<p>Segun el lenguaje tendra una asignatura, una firma o un prototipo.Esto seria que es la forma en la que la declaramos, si es <strong>PUBLICA</strong> o <strong>PRIVADA</strong>.</p>
+
+<p>Publico puedo usarlo <strong>fuera de la clase</strong> y un Privado solamente puedo utilizarlo <strong>dentro de la clase.</strong></p>
+
+### <strong>`Pseudocodigo`</strong>
+
+```
+CLASE A
+  PROPIEDAD1
+  PROPIEDAD2
+
+  //Metodo
+  [VISIBILIDAD][NOMBRE_METODO](PARAMETROS)[VALOR]
+  PUBLICA leerLibros(TEXTO libro) TEXTO contenido
+```
+
+- _Ejemplo en [`codigo`](./ejercicio/app/src/_metodos/metodos.java)_
+
+## **Parametros por valor o por referencia**
+
+- Paso por valor: conciste en que cuando llamo una funcion, copio en memoria y se los doy.
+
+  ### <strong>`Pseudocodigo`</strong>
+
+```
+FUNCION SUMA(INT A,INT B){
+    DEVUELVE A + B;
+}
+
+VAR VALORA = 5;
+VAR VALORB = 10;
+
+SUMA(VALORA, VALORB);
+
+```
+
+- Paso por referencia: Es cuando un metodo recibe como parametro un objeto.
+
+<br>
+
+---
+
+## **Recursividad**
+
+<p>La <strong>Recursividad</strong> conciste en que un metodo se llama asi misma varias veces.</p>
+<p>El problema de la <strong>recursividad</strong> es que tenemos que saber cuando detenerla porque en un momento puede llegar a  <strong>explotar el programa</strong> </p>
+
+### <strong>`Pseudocodigo`</strong>
+
+```
+FUNCION SUMA(INT A, INT B){
+
+    VAR TEMP = A + B;
+    SUMA(A, TEMP)
+}
+
+```
+
+<p>La forma de detener una recursividad es con un <strong>RETUNR</strong> </p>
+
+- _Ejemplo en [`codigo`](./ejercicio/app/src/_metodos/recursividad.java)_
+
+---
+
+<br>
+
+# **Lenguajes compilados e interpretados**
+
+<br>
+
+## **Compilador**
+
+<p>Un compilador obtiene un secuencia de caracteres que forma un fichero de codigo y lo convierte en codigo maquina o otro lenguaje como un traducto de idiomas.</p>
+
+## **Tipos de compiladores**
+
+- Lenguaje Compilado
+- Lenguaje Interpretado
+
+```
+CODIGO FUENTE ->[ACA TRANAJA EL COMPILADOR]-> CODIGO FINAL
+```
+
+<p>Un compilador tiene varias FASE que son:</p>
+
+### **FASE: ANALIZADOR LEXICO**
+
+<p>El anlizador lexico va leyendo cada unos de los caracteres y su funcion principal es obtener string de tokens</p>
+
+```
+VAR VARIABLE = 10;
+
+~~~~~
+V -> LETRA V
+A -> LETRA A
+R -> LETRA R
+= -> SIMBOLO IGUAL
+1 -> NUMERO
+0 -> NUMERO
+; -> PUNTO Y COMA
+```
+
+<p>Sigue analizando para saber si son palabras reservadas</p>
+
+```
+VAR -> "PALABRA RESERVADA"(COMO: IF, WHILE, DO, STATIC)
+VARIABLE -> "IDENTIFICADOR"
+= -> "SIMBOLO ASIGNACION"
+10 -> "NUMERO ENTERO"
+```
+
+### **FASE: SINTACTICO**
+
+<p>El analizador sintactico es el que nos avisa que estamos usando algo mal y nos tirar los famosos ERROR DE SINTAXIS</p>
+
+```
+IF (numero > 10){...}
+
+~~~~
+1.IF
+2.ABRE PARENTESIS
+3.CONDICION
+4.CIERRA PARENTESIS
+5.ABRE LLAVE
+6.EXPRESIONES
+7.CIERRA LLAVE
+```
+
+### **FASE: CODIGO INTERMEDIO**
+
+<p>En esta FASE nos da un codigo que simplifica el lenguaje humano para poder representar en la estructura de datos y que lo puede manejar mejor el complilador.</p>
+<p><strong>ABSTRACT SYNTAX TREE (ARBOL SINTACTICO ABSTRACTO)</strong> es llamado asi el codigo que nos da para el compilador</p>
+
+### **FASE: OPTIMIZACION DEL CODIGO INTERMEDIO**
+
+<p>Esta FASE pueden ser capaces de generar mas optimo del que nosotros escribimos o eliminar codigo redundante.</p>
+
+```
+VAR VARIABLE = 3;
+
+IF (VARIABLE == 0){
+  ACCION;
+}
+```
+
+<p>Un ejemplo seria este en donde no funcionaria y algunos compiladores lo eliminan porque no andaria por la condicion.</p>
+
+```
+FOR (i=0; i <=4; i++){
+    System.out.println("Valor actual:" + i);
+}
+```
+
+<p>Otro ejemplo podria ser como este for donde el compilador entiende que esta interacción es mas costoso que quitar la interacción y dara como resultado <strong>Unroll loops</strong> que es una tecnica de optimizacion.</p>
+
+```
+    System.out.println("Valor actual: 0");
+    System.out.println("Valor actual: 1");
+    System.out.println("Valor actual: 2");
+    System.out.println("Valor actual: 3");
+    System.out.println("Valor actual: 4");
+```
+
+### **FASE: GENERACION DE CODIGO**
+
+<p>En esta FASE vemos ya los resultados generados que puede ser:</p>
+
+- CODIGO MAQUINA
+- CODIGO PAR SER INTERPRETADO
+
+<p>La diferencia entre los dos es que: un lenguaje  </p>
+<p>Todos los compiladores funciona de la misma forma pero lo que varia es el resultado final.</p>
+
+### <strong>`Pseudocodigo`</strong>
+
+## **title**
+
+<p>parrafo</p>
+<br>
+<strong></strong>
+
+- _Ejemplo en [`codigo`](./ejercicio/app/src/_metodos/metodos.java)_
